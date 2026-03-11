@@ -1,0 +1,10 @@
+<api type="debug" assembly-name="Concurso" mvid="9fbbb87f8b114a37b1e716429de38cda">
+  <java-to-managed>
+    <entry java-name="crc64c6633ddc9c00828c/MainActivity" managed-name="Concurso.MainActivity, Concurso" managed-type-token-id="33554444" />
+    <entry java-name="crc64c6633ddc9c00828c/MainApplication" managed-name="Concurso.MainApplication, Concurso" managed-type-token-id="33554445" />
+  </java-to-managed>
+  <managed-to-java>
+    <entry java-name="crc64c6633ddc9c00828c/MainActivity" managed-name="Concurso.MainActivity, Concurso" managed-type-token-id="33554444" />
+    <entry java-name="crc64c6633ddc9c00828c/MainApplication" managed-name="Concurso.MainApplication, Concurso" managed-type-token-id="33554445" />
+  </managed-to-java>
+</api>

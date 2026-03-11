@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Concurso.MainPage"
+             Title="Monitor de Concursos PCI">
+
+    <Grid RowDefinitions="120,*,160">
+
+        <!-- Toolbar -->
+        <Border Grid.Row="0" BackgroundColor="#2c3e50" Padding="6,4">
+            <Grid RowDefinitions="Auto,Auto,Auto" RowSpacing="4">
+
+                <!-- Linha 1: botões de ação (Grid com 4 colunas iguais) -->
+                <Grid Grid.Row="0" ColumnDefinitions="*,*,*,*" ColumnSpacing="4">
+                    <Button Grid.Column="0"
+                            x:Name="BtnCarregar"
+                            Text="🌐 Carregar"
+                            BackgroundColor="#2980b9"
+                            TextColor="White"
+                            CornerRadius="6"
+                            Padding="2,5"
+                            FontSize="11"
+                            Clicked="OnCarregarClicked" />
+                    <Button Grid.Column="1"
+                            x:Name="BtnGerar"
+                            Text="📊 Relatório"
+                            BackgroundColor="#27ae60"
+                            TextColor="White"
+                            CornerRadius="6"
+                            Padding="2,5"
+                            FontSize="11"
+                            IsEnabled="False"
+                            Clicked="OnGerarClicked" />
+                    <Button Grid.Column="2"
+                            x:Name="BtnExportar"
+                            Text="💾 Exportar"
+                            BackgroundColor="#8e44ad"
+                            TextColor="White"
+                            CornerRadius="6"
+                            Padding="2,5"
+                            FontSize="11"
+                            Clicked="OnExportarClicked" />
+                    <Button Grid.Column="3"
+                            x:Name="BtnLimpar"
+                            Text="🗑️ Limpar"
+                            BackgroundColor="#c0392b"
+                            TextColor="White"
+                            CornerRadius="6"
+                            Padding="2,5"
+                            FontSize="11"
+                            Clicked="OnLimparClicked" />
+                </Grid>
+
+                <!-- Linha 2: status -->
+                <Label Grid.Row="1"
+                       x:Name="LblStatus"
+                       Text="Aguardando..."
+                       TextColor="#bdc3c7"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontSize="11" />
+
+                <!-- Linha 3: abrir seletor de estados -->
+                <Button Grid.Row="2"
+                        x:Name="BtnEstados"
+                        Text="🗺️ Estados: 28/28"
+                        BackgroundColor="#16a085"
+                        TextColor="White"
+                        CornerRadius="6"
+                        Padding="2,5"
+                        FontSize="11"
+                        Clicked="OnEstadosClicked" />
+
+            </Grid>
+        </Border>
+
+        <!-- WebView -->
+        <WebView Grid.Row="1"
+                 x:Name="MainWebView"
+                 Navigating="OnWebViewNavigating"
+                 Navigated="OnWebViewNavigated" />
+
+        <!-- Log Panel -->
+        <Border Grid.Row="2" BackgroundColor="#1a1a2e" Padding="10,6">
+            <Grid RowDefinitions="Auto,*">
+                <Grid Grid.Row="0" ColumnDefinitions="*,Auto" Margin="0,0,0,4">
+                    <Label Grid.Column="0"
+                           Text="📋 LOG DE STATUS"
+                           TextColor="#7f8c8d"
+                           FontSize="10"
+                           FontAttributes="Bold"
+                           CharacterSpacing="1"
+                           VerticalOptions="Center" />
+                    <Button Grid.Column="1"
+                            Text="📋 Copiar"
+                            BackgroundColor="#2c3e50"
+                            TextColor="#bdc3c7"
+                            BorderColor="#7f8c8d"
+                            BorderWidth="1"
+                            CornerRadius="4"
+                            FontSize="10"
+                            Padding="8,2"
+                            HeightRequest="26"
+                            Clicked="OnCopiarLogClicked" />
+                </Grid>
+                <ScrollView Grid.Row="1" x:Name="LogScrollView">
+                    <Label x:Name="LogLabel"
+                           TextColor="#95a5a6"
+                           FontSize="11"
+                           LineBreakMode="CharacterWrap" />
+                </ScrollView>
+            </Grid>
+        </Border>
+
+    </Grid>
+</ContentPage>
