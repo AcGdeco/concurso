@@ -7,7 +7,7 @@
     <Grid RowDefinitions="Auto,*">
 
         <!-- Header bar -->
-        <Border Grid.Row="0" BackgroundColor="#2c3e50" Padding="10,6">
+        <Border Grid.Row="0" BackgroundColor="#2c3e50" Padding="4,6">
             <HorizontalStackLayout Spacing="10">
                 <Button Text="← Voltar"
                         BackgroundColor="#2980b9"

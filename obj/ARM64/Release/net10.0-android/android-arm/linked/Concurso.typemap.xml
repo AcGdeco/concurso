@@ -1,0 +1,8 @@
+<api type="release" assembly-name="Concurso" mvid="837dace1758b47bf933f0652522781a2">
+  <module assembly-name="Concurso" mvid="837dace1758b47bf933f0652522781a2" mvid-bytes="4ax9g4t1v0eTPwZSUieBog==">
+    <types-scratch>
+      <entry key="crc64c6633ddc9c00828c/MainActivity" java-name="crc64c6633ddc9c00828c/MainActivity" managed-type-name="Concurso.MainActivity" token="33554458" />
+      <entry key="crc64c6633ddc9c00828c/MainApplication" java-name="crc64c6633ddc9c00828c/MainApplication" managed-type-name="Concurso.MainApplication" token="33554459" />
+    </types-scratch>
+  </module>
+</api>

@@ -36,8 +36,21 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
-		<Platforms>AnyCPU;ARM32;ARM64</Platforms>
+
+		<!-- Android: gerar APK para arm64-v8a e armeabi-v7a em Release -->
+		<RuntimeIdentifiers Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">android-arm64;android-arm</RuntimeIdentifiers>
+		<AndroidPackageFormats Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android' And '$(Configuration)' == 'Release'">apk</AndroidPackageFormats>
+		<Platforms>AnyCPU;ARM64</Platforms>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- Excluir pasta duplicada -->
+		<Compile Remove="concurso\**" />
+		<MauiXaml Remove="concurso\**" />
+		<None Remove="concurso\**" />
+		<Content Remove="concurso\**" />
+		<EmbeddedResource Remove="concurso\**" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<!-- App Icon -->

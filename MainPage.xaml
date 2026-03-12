@@ -2,16 +2,17 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Concurso.MainPage"
-             Title="Monitor de Concursos PCI">
+             Title="Monitor de Concursos PCI"
+             BackgroundColor="#1a1a2e">
 
-    <Grid RowDefinitions="120,*,160">
+    <Grid RowDefinitions="120,*,160" RowSpacing="0">
 
         <!-- Toolbar -->
-        <Border Grid.Row="0" BackgroundColor="#2c3e50" Padding="6,4">
+        <Border Grid.Row="0" BackgroundColor="#2c3e50" Padding="0,4" Stroke="Transparent" StrokeThickness="0">
             <Grid RowDefinitions="Auto,Auto,Auto" RowSpacing="4">
 
                 <!-- Linha 1: botões de ação (Grid com 4 colunas iguais) -->
-                <Grid Grid.Row="0" ColumnDefinitions="*,*,*,*" ColumnSpacing="4">
+                <Grid Grid.Row="0" ColumnDefinitions="*,*,*,*" ColumnSpacing="2">
                     <Button Grid.Column="0"
                             x:Name="BtnCarregar"
                             Text="🌐 Carregar"
@@ -81,7 +82,7 @@
                  Navigated="OnWebViewNavigated" />
 
         <!-- Log Panel -->
-        <Border Grid.Row="2" BackgroundColor="#1a1a2e" Padding="10,6">
+        <Border Grid.Row="2" BackgroundColor="#1a1a2e" Padding="0,6" Stroke="Transparent" StrokeThickness="0">
             <Grid RowDefinitions="Auto,*">
                 <Grid Grid.Row="0" ColumnDefinitions="*,Auto" Margin="0,0,0,4">
                     <Label Grid.Column="0"

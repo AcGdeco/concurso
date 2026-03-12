@@ -391,8 +391,8 @@ public partial class MainPage : ContentPage
     let htmlRelatorio = `
         <html><head><title>Relat\u00f3rio de Concursos</title><meta charset='UTF-8'>
         <style>
-            body { font-family:'Segoe UI',sans-serif; padding:30px; background:#f4f7f6; }
-            .card { max-width:900px; margin:auto; background:white; padding:25px; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
+            body { font-family:'Segoe UI',sans-serif; background:#f4f7f6; }
+            .card { max-width:900px; margin:auto; background:white; padding:5px; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
             h1 { text-align:center; color:#2c3e50; border-bottom:2px solid #3498db; padding-bottom:10px; }
             h2 { padding:8px 15px; border-radius:5px; color:white; margin-top:25px; font-size:1.2em; }
             .bg-sudeste { background:#c0392b; } .bg-sul { background:#2980b9; } .bg-nordeste { background:#e67e22; } .bg-norte { background:#27ae60; } .bg-centroeste { background:#8e44ad; } .bg-nacional { background:#2c3e50; }
